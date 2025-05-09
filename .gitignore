@@ -21,3 +21,41 @@ Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
+
+
+# Laravel (backend)
+backend/vendor/
+backend/.env
+backend/.env.backup
+backend/.env.example.backup
+backend/storage/*.key
+backend/public/storage
+backend/public/hot
+backend/bootstrap/cache/*
+!backend/bootstrap/cache/.gitignore
+backend/.phpunit.result.cache
+backend/Homestead.json
+backend/Homestead.yaml
+backend/*.log
+
+# Next.js (frontend)
+frontend/.next/
+frontend/out/
+frontend/build/
+frontend/node_modules/
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+frontend/npm-debug.log*
+frontend/yarn.lock
+frontend/package-lock.json
+frontend/.vercel
+frontend/coverage/
+
+# General
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
