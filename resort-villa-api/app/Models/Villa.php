@@ -1,20 +1,17 @@
 <?php
-
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Villa extends Model
 {
-    protected $fillable = ['resort_id', 'name', 'description'];
+    use HasFactory;
 
-    public function resort()
-    {
-        return $this->belongsTo(Resort::class);
-    }
+    protected $fillable = ['name', 'description', 'price_per_night', 'capacity', 'image_url'];
 
-    public function rooms()
+    public function bookings()
     {
-        return $this->hasMany(Room::class);
+        return $this->hasMany(Booking::class);
     }
 }
