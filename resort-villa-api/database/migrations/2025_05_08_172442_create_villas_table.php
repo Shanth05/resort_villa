@@ -12,10 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('villas', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId('resort_id')->constrained()->onDelete('cascade');
-            $table->string('name');
-            $table->text('description')->nullable();
+           $table->id();
+            $table->string('name')->unique();
+            $table->text('description');
+            $table->decimal('price_per_night', 8, 2);
+            $table->integer('capacity');
+            $table->string('image_url')->nullable();
             $table->timestamps();
         });
     }
